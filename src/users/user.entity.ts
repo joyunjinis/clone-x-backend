@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import { Feed } from 'src/feeds/feed.entity';
 
 @Entity('users')
 export class User {
@@ -16,4 +17,7 @@ export class User {
 
   @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
   created_at!: Date;
+
+  @OneToMany(() => Feed, (feed) => feed.user)
+  feed!: Feed[];
 }

@@ -12,7 +12,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       host: 'clone-twiteer-clone-twitter.i.aivencloud.com',
       port: 19491,
       username: 'avnadmin',
-      password: 'process.env.DB_PASSWORD',
+      password: 'AVNS_sTd_MEbzF11BpubA97d',
       database: 'twitter',
       autoLoadEntities: true,
       synchronize: false,
